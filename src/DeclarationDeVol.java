@@ -13,7 +13,7 @@ public class DeclarationDeVol {
     private LocalTime heureVol;
     private Lieu lieu;
     private Date dateDerniereModification;
-    private String etat;
+    private Etat etat;
     private static List<DeclarationDeVol> declarations = new ArrayList<>();
     private static int cptId = 1;
 
@@ -24,12 +24,12 @@ public class DeclarationDeVol {
         this.heureVol = heureVol.toLocalTime();
         this.lieu = lieu;
         this.dateDerniereModification = new Date(System.currentTimeMillis());
-        this.etat = "nouvelle"; 
+        this.etat = Nouvelle; 
 
     }
 
     public void modifier() {
-        this.etat = "mise à jour";
+        this.etat = MiseAJour;
         this.dateDerniereModification = new Date(System.currentTimeMillis()); 
 
     }
@@ -39,7 +39,7 @@ public class DeclarationDeVol {
         modifier();
     }
 
-    public void changerEtat(String nouvelEtat) {
+    public void changerEtat(Etat nouvelEtat) {
         this.etat = nouvelEtat;
         this.dateDerniereModification = new Date(System.currentTimeMillis());
     }
