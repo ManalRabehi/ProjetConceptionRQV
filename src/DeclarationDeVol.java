@@ -3,7 +3,6 @@ import java.sql.Time;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class DeclarationDeVol {
@@ -24,12 +23,12 @@ public class DeclarationDeVol {
         this.heureVol = heureVol.toLocalTime();
         this.lieu = lieu;
         this.dateDerniereModification = new Date(System.currentTimeMillis());
-        this.etat = Nouvelle; 
+        this.etat = Etat.Nouvelle;
 
     }
 
     public void modifier() {
-        this.etat = MiseAJour;
+        this.etat = Etat.MiseAJour;
         this.dateDerniereModification = new Date(System.currentTimeMillis()); 
 
     }
@@ -81,7 +80,7 @@ public class DeclarationDeVol {
         return lieu;
     }
 
-    public String getEtat() {
+    public Etat getEtat() {
         return etat;
     }
 }

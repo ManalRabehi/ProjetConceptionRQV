@@ -6,7 +6,7 @@ public class AgentPolicier extends Personne {
     private String mdp ;
 
     public AgentPolicier(String CNI, String nom, String prenom, String adresse, int telephone, String login, String mdp) {
-        super(CNI,nom, prenom, adresse, telephone);
+        super(CNI,nom, prenom, Role.AgentPolicier, adresse, telephone);
         this.login = login;
         this.mdp = mdp;
     }
@@ -30,11 +30,11 @@ public class AgentPolicier extends Personne {
 
         for (DeclarationDeVol d : declarations) {
             switch (d.getEtat()) {
-                case "nouvelle" :
+                case Etat.Nouvelle:
                     rqv.ajouterNewDeclaration(d);
-                case "mise à jour" :
+                case Etat.MiseAJour:
                     rqv.ajouterDeclarationMAJ(d);
-                case "résolue":
+                case Etat.Résolue:
                     rqv.ajouterDeclarationResolues(d);
             }
         }
@@ -42,7 +42,7 @@ public class AgentPolicier extends Personne {
 
     }
 
-    public void modifierEtatDeclaration(DeclarationDeVol d, String etat) {
+    public void modifierEtatDeclaration(DeclarationDeVol d, Etat etat) {
         d.changerEtat(etat);
         d.modifier();
 
@@ -50,6 +50,11 @@ public class AgentPolicier extends Personne {
 
     public boolean authentifier(String login, String mdp) {
         return this.login.equals(login) && this.mdp.equals(mdp);
+
+    }
+
+    @Override
+    public void update() {
 
     }
 }

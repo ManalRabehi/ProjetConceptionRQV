@@ -1,3 +1,3 @@
 public enum Role {
-    Victime, Temoin, VictimeEtTemoin;
+    Victime, Temoin, VictimeEtTemoin, AgentPolicier;
 }
