@@ -54,7 +54,7 @@ public class AgentPolicier extends Personne {
     }
 
     @Override
-    public void update() {
+    public void update(String message) {
 
     }
 }

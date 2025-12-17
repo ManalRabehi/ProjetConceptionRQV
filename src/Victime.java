@@ -9,17 +9,16 @@ public class Victime extends Personne{
     public DeclarationDeVol declarerVol(ProprieteVolee propriete,
                                         LocalDate dateVol,
                                         LocalTime heureVol,
-                                        String lieu,
+                                        Lieu lieu,
                                         String description){
         return new DeclarationDeVol(propriete,
                 dateVol,
                 heureVol,
-                lieu,
-                description);
+                lieu);
     }
 
     @Override
-    public void update(){
+    public void update(String message){
         System.out.println("Nptification envoyée à la victime : " + nom + " " + prenom);
     }
 

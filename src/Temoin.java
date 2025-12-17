@@ -16,13 +16,11 @@ public class Temoin extends Personne{
         return new DeclarationDeVol(propriete,
                 dateVol,
                 heureVol,
-                lieu,
-                dateDerniereModification,
-                etat);
+                lieu);
     }
 
     @Override
-    public void update(){
+    public void update(String message){
         System.out.println("Nptification envoyée au témoin : " + nom + " " + prenom);
     }
 

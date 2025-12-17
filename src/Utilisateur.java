@@ -1,3 +1,3 @@
 public interface Utilisateur {
-    public void update();
+    public void update(String message);
 }

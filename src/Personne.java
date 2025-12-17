@@ -60,5 +60,7 @@ public abstract class Personne implements Utilisateur{
     }
 
     @Override
-    public abstract void update();
+    public void update(String message){
+
+    }
 }

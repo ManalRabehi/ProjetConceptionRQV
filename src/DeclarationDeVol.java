@@ -16,11 +16,11 @@ public class DeclarationDeVol {
     private static List<DeclarationDeVol> declarations = new ArrayList<>();
     private static int cptId = 1;
 
-    public DeclarationDeVol(ProprieteVolee propriete, Date dateVol, Time heureVol, Lieu lieu) {
+    public DeclarationDeVol(ProprieteVolee propriete, LocalDate dateVol, LocalTime heureVol, Lieu lieu) {
         this.id = cptId++;
         this.propriete = propriete;
-        this.dateVol = dateVol.toLocalDate();
-        this.heureVol = heureVol.toLocalTime();
+        this.dateVol = dateVol;
+        this.heureVol = heureVol;
         this.lieu = lieu;
         this.dateDerniereModification = new Date(System.currentTimeMillis());
         this.etat = Etat.Nouvelle;
