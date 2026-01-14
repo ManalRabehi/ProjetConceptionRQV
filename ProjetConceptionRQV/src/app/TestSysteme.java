@@ -237,7 +237,7 @@ public class TestSysteme {
                 System.out.println("+ ID " + d.getId() + " - "  + p.getMarque() + " " + p.getCouleur());
             }
                
-            // ==========PARTIE 7 : Supprission d'une declaration============
+            // ===========PARTIE 7 : Supprission d'une declaration============
             
             System.out.println("Suppression de la déclaration ID " + declaration3.getId() + " (" 
                     + declaration3.getPropriete().getMarque() + " " + declaration3.getPropriete().getCouleur() + ")");
@@ -251,11 +251,9 @@ public class TestSysteme {
                 
             }else {
                 System.out.println("Connexion échouée.");
-            }
-            
+            }       
           
-        }
-        		
+        }     		
 }
 
 	
