@@ -253,7 +253,113 @@ public class TestSysteme {
                 System.out.println("Connexion échouée.");
             }       
           
-        }     		
+        }
+	
 }
+
+
+/* **** Sortie de Systeme ****
+ * 
+  Systeme de gestion des declarations de vol
+
+ PARTIE 1 : Creation des utilisateurs
+
+3 victimes creees : Rohaut Cédric,  Charlie Thomas,  Blanchetot  Julien
+2 temoins crees : Martin Charlot, Marie Lola
+Agent de police cree :PIERRET Sophie
+
+ PARTIE 2 : Declarations de vol par les victimes
+
+Declaration 1 : Cédric declare le vol de sa trottinette
+Déclaration créée par  Rohaut Cédric
+  + ID : 1
+  + Rôle :Victime
+  + Objet : Noir Xiaomi (N°série: ARF673)
+  + Lieu : 15 null, Toulouse, 31000
+  + Date : 2026-01-14
+  + Heure : 16:30
+
+Declaration 2 : Thomas declare le vol de sa trottinette
+Declaration creee par  Charlie Thomas
+  + ID : 2
+  + Objet : Noir Xiaomi
+
+Declaration 3 : Julien declare le vol de sa trottinette
+Declaration creee par  Blanchetot  Julien
+  + ID : 3
+  + Objet : Bleu HIKERBOY
+
+
+ PARTIE 3 : Declarations de vol par les temoins
+
+Declaration par temoin : Charlot a vu le vol de la trottinette
+Déclaration créée par Martin Charlot
+  + ID : 3
+  + Rôle : Temoin
+  + Objet : Noir Xiaomi (N°série: ARF673)
+  + Lieu : 17 null, Toulouse, 31000
+   Le témoin a vu le vol en cours à 16:25. 
+Declaration par temoin : Lola a vu le vol d'un scooter rouge
+Declaration creee par Marie Lola
+  + ID : 5
+  + Rôle : Temoin
+  + Objet : Rouge NIU (Matricule: BRF634)
+  + Lieu : 17 null, Toulouse, 31000
+
+PARTIE 4 : Modification des declarations
+
+Modification de la declaration par Cédric (victime)
+Cédric se souvient : c'était au numero 17, pas 15
++ État initial : Nouvelle
++ Lieu initial : 15 null, Toulouse,31000
+
+ Cédric se souvient : c'était au numéro de rue 17, pas 15
+ + État après modification : MiseAJour
+ + Nouveau lieu : 17 avenue Minimes, Toulouse,31000
+ + Date de modification : 2026-01-14
+
+Modification de la declaration par Lola (temoin)
+Lola se souvient : c'était Av. de Muret, pas av Saint Michel
++ État initial : Nouvelle
++ Lieu initial : 5 null, Toulouse,31000
+ + État après modification : MiseAJour
+ + Nouveau lieu : 85 Av. de Muret, Toulouse,31000
+ + Date de modification : 2026-01-14
+
+ PARTIE 5 : Objet trouve et notification des victimes
+
+Une trottinette est retrouvee par la police
+  Caracteristiques : Noir Xiaomi (N° serie: ARF673)
+
+Nptification envoyée à la victime :  Rohaut Cédric
+Nptification envoyée à la victime :  Charlie Thomas
+
+Declaration 1 marquee comme resolue
+
+
+ PARTIE 6 : Authentification de l'agent et generation du rapport
+
+L'agent Sophie tente de se connecter au systeme.
+Connexion reussie
+
+ Generation du Rapport Quotidien de Vol (RQV)
+ RQV du 2026-01-14
+  Liste des nouvelles déclarations :
++ ID 2 - Xiaomi Noir
++ ID 3 - HIKERBOY Bleu
++ ID 4 - Xiaomi Noir
+
+Liste des declarations mises a jour :
++ ID 5 - NIU Rouge
+
+Liste des declarations resolues :
++ ID 1 - Xiaomi Noir
+Suppression de la déclaration ID 3 (HIKERBOY Bleu)
+Vérification après suppression :
++ ID 1 - Xiaomi Noir
++ ID 2 - Xiaomi Noir
++ ID 4 - Xiaomi Noir
++ ID 5 - NIU Rouge
+*/
 
 	

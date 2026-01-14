@@ -46,7 +46,7 @@ public class AgentPolicier extends Personne {
         return rqv;
 
     }
-
+  
     public void modifierEtatDeclaration(DeclarationDeVol d, Etat etat) {
         d.changerEtat(etat);
       //  d.modifier();
@@ -61,4 +61,5 @@ public class AgentPolicier extends Personne {
     public void update(String message) {
 
     }
+    
 }
