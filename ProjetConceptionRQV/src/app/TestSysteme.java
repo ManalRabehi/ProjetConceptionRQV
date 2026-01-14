@@ -188,6 +188,7 @@ public class TestSysteme {
         objetTrouve.notify("Une trottinette Xiaomi noire a été retrouvée au commissariat !");
         System.out.println();
         
+        
         // L'agent marque la declaration comme resolue
 
         agentP.modifierEtatDeclaration(declaration1, Etat.Résolue);

@@ -50,7 +50,6 @@ public class AgentPolicier extends Personne {
     public void modifierEtatDeclaration(DeclarationDeVol d, Etat etat) {
         d.changerEtat(etat);
       //  d.modifier();
-
     }
 
     public boolean authentifier(String login, String mdp) {
